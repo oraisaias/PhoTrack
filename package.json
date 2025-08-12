@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --udid 00008110-000E0CE02120A01E",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
@@ -20,7 +20,8 @@
     "react-native-permissions": "^5.4.2",
     "react-native-safe-area-context": "^5.5.2",
     "react-native-screens": "^4.13.1",
-    "react-native-vision-camera": "^4.7.1"
+    "react-native-vision-camera": "^4.7.1",
+    "zustand": "^5.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

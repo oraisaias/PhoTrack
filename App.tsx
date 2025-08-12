@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CameraScreen from './src/features/Camera/screens/CameraScreen';
-
+import Dashboard from './src/features/Dashboard/screens/Dashboard';
 
 function HomeScreen() {
   return (
@@ -18,8 +18,8 @@ const Stack = createNativeStackNavigator();
 
 function RootStack() {
   return (
-    <Stack.Navigator initialRouteName="Camera">
-      <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Home" component={Dashboard} />
       <Stack.Screen name="Camera" component={CameraScreen} />
     </Stack.Navigator>
   );
@@ -27,11 +27,6 @@ function RootStack() {
 
 const App = () => {
 
-  const {request} = usePermissions();
-
-  useEffect(() => {
-    request();
-  }, [request]);
 
   return (
     <NavigationContainer>
